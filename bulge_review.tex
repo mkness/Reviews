@@ -1,0 +1,100 @@
+% style notes
+% - \,percent not \%
+
+\documentclass[12pt, preprint]{aastex}
+\usepackage{bm, graphicx, subfigure, amsmath, morefloats}
+
+% words
+\newcommand{\project}[1]{\textsl{#1}}
+\newcommand{\thecannon}{\project{The~Cannon}} 
+\newcommand{\tc}{\project{The~Cannon}} 
+\newcommand{\apogee}{\project{APOGEE}}
+\newcommand{\apokasc}{\project{APOKASC}}
+\newcommand{\aspcap}{\project{ASPCAP}}
+\newcommand{\corot}{\project{Corot}}
+\newcommand{\kepler}{\project{Kepler}}
+\newcommand{\gaia}{\project{Gaia}}
+\newcommand{\gaiaeso}{\project{Gaia--ESO}}
+\newcommand{\galah}{\project{GALAH}}
+\newcommand{\most}{\project{MOST}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\documentname}{\textsl{Article}}
+
+\newcommand{\teff}{\mbox{$\rm T_{eff}$}}
+\newcommand{\kms}{\mbox{$\rm kms^{-1}$}}
+\newcommand{\feh}{\mbox{$\rm [Fe/H]$}}
+\newcommand{\xfe}{\mbox{$\rm [X/Fe]$}}
+\newcommand{\alphafe}{\mbox{$\rm [\alpha/Fe]$}}
+\newcommand{\mh}{\mbox{$\rm [M/H]$}}
+\newcommand{\logg}{\mbox{$\rm \log g$}}
+\newcommand{\noise}{\sigma_{n\lambda}}
+\newcommand{\scatter}{s_{\lambda}}
+\newcommand{\pix}{\mathrm{pix}}
+\newcommand{\rfn}{\mathrm{ref}}
+\newcommand{\rgc}{\mbox{$\rm R_{GC}$}}
+\newcommand{\rgal}{\mbox{$\rm R_{GAL}$}}
+\newcommand{\vgal}{\mbox{$\rm V_{GAL}$}}
+
+% math and symbol macros
+\newcommand{\set}[1]{\bm{#1}}
+\newcommand{\starlabel}{\ell}
+\newcommand{\starlabelvec}{\set{\starlabel}}
+\newcommand{\mean}[1]{\overline{#1}}
+\newcommand{\given}{\,|\,}
+%\newcommand{\teff}{\mbox{$\rm T_{eff}$}}
+%\newcommand{\kms}{\mbox{$\rm kms^{-1}$}}
+%\newcommand{\feh}{\mbox{$\rm [Fe/H]$}}
+%\newcommand{\xfe}{\mbox{$\rm [X/Fe]$}}
+%\newcommand{\alphafe}{\mbox{$\rm [\alpha/Fe]$}}
+%\newcommand{\mh}{\mbox{$\rm [M/H]$}}
+%\newcommand{\logg}{\mbox{$\rm \log g$}}
+%\newcommand{\noise}{\sigma_{n\lambda}}
+%\newcommand{\scatter}{s_{\lambda}}
+
+% math
+\newcommand{\numax}{$\nu_{\max}$}
+\newcommand{\deltanu}{$\Delta\nu$}
+\bibliographystyle{apj}
+
+\begin{document}
+
+
+
+% To do. 
+% 1. release two catalogues :
+% 1a) trained on log mass and 1b) trained on log mass
+%2. resample the errors in label space - add a random error to the mass term and rerun the labels through the cannon and see if the standard deviation and bias in the take one out test is any different - if not we know the noisiness in the training set is not an issue
+%3. cut out a lot of regions except for the CN and retrain and see if the take-out-out test sigma increases or decreases in the dispersion - if increases we know we are limited by the information available in the data. If decreases there is degeneracy / noisiness in the covariance of labels? 
+
+% plotting in /Apogee_ages/makeplot_scatter_test18_step.py 
+% and plotelements_on_spectra.py 
+
+%\title{Measuring red-giant masses and ages from stellar spectra: Stellar Ages across the Milky Way disk}
+\title{Masses and ages from stellar spectra -- a catalogue of APOGEE red clump and red giant ages for the Milky Way disk}
+\author{M.~Ness\altaffilmark{1},
+David~W.~Hogg\altaffilmark{1,2,3},
+H.-W.~Rix\altaffilmark{1},
+M.~Martig \altaffilmark{1},
+A.Y.~Q~Ho \altaffilmark{1},
+\textbf{others}}
+\altaffiltext{1}{Max-Planck-Institut f\"ur Astronomie, K\"onigstuhl 17, D-69117 Heidelberg, Germany}
+\altaffiltext{2}{Center for Cosmology and Particle Physics, Department of Phyics,
+             New York University, 4 Washington Pl., room 424, New York, NY, 10003, USA}
+\altaffiltext{3}{Center for Data Science, New York University, 726 Broadway, 7th Floor, New York, NY 10003, USA}
+% \altaffiltext{4}{NSF Astronomy and Astrophysics Postdoctoral Fellow}
+% \altaffiltext{5}{Department of Physics \& Astronomy, Johns Hopkins University, Baltimore, MD, 21218, USA}
+\email{ness@mpia.de}
+
+Metallicity distribution of bulge stars . . . . . . . . . . . . . . Melissa Ness & Ken Freeman1. Global MDF: - Discussion on the overall metallicity, gradients2. Formation models and the MDF: - Discussion of how models relate to observabletrends in the MDF3. Multiple bulge populations: - Discussion on multiple populations with differentgroups associating them to different origins4. The MFD in the plane: - i.e. new results from APOGEE that are in hand fromanalysis of public data.5. Disentangling populations with kinematics, individual abundances and propermotions: - how the additional phase-space parameters can be used to differentiateformation histories6. The metal poor [Fe/H] Á -1.0 population in the bulge: - Discussion about theRR Lyrae distribution and also what the metal poor stars in the inner region may be: distinct bulge population versus halo population.
+
+\begin{abstract}%
+
+\end{abstract}
+
+\section*{Acknowledgments}
+It is a pleasure to thank ABandC.
+
+
+\bibliography{tc.bib}
+
+\end{document}
